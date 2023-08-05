@@ -1,0 +1,283 @@
+/*
+Create html information page
+Style it 
+    1. Font 
+        margin:0; -> to avoid space in starting
+    2. Color of the font
+    3. id or class designing.
+*/
+
+body{
+    font-family: 'PT Sans', sans-serif;
+    background-color: #252529;
+    margin:0;
+    color: #fff;
+    line-height: 1.6; /*Each line have a space 1.6*/
+}
+
+a{
+    text-decoration: none;
+    color:#ccc;
+}
+
+#showcase{
+    margin:0;
+    padding: 0;
+    background: url('https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&w=1000&q=80') no-repeat center/cover;
+    /*Any background image will repeat so do above code*/
+    width: 100%;
+    height:100vh; /*viewport-height -> how user looking at the screen*/
+    position: relative; /*image should not move*/
+    overflow-y:hidden;
+}
+
+#showcase .container
+{
+    margin-top: 25vh;
+}
+
+#showcase h1
+{
+    font-size: 4rem; /*rem -> root element font size*/
+    margin-bottom: 0;
+}
+
+#showcase h2
+{
+    font-size: 2rem; /*rem -> root element font size*/
+}
+
+nav{
+    height: 40px;
+    width: 100%;
+    background-color: #333;
+    color: rgb(51,34,34); /*nav contains list tag like dot */
+    position: fixed;
+}
+
+nav ul
+{
+    margin:0;
+    padding:0;
+}
+
+nav li
+{
+    display:inline;/*all the navigation links coming in the same line*/
+    float:left; /*aligning*/
+}
+
+nav a
+{
+    display: inline-block; /*This command is important as it makes each anchor tag as block where we can apply width and height for example*/
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0; /*top bottom only. l=r=0*/
+    color: #eee;
+}
+
+nav li:hover
+{
+    background-color: #444;
+}
+
+.container
+{
+    max-width: 1180px; /*This will set maximum width if the content exceeds the maximum width it will use height*/
+    text-align: center;
+    margin:0 auto;
+    padding: 0 3rem;
+}
+
+.lead
+{
+    font-size: 1.3rem;
+}
+
+footer .footer-cols
+{
+    /*GRID SYSTEM -> IN FOOTER*/
+    display: grid; /*to become row and column*/
+    grid-gap: 20px;
+    grid-template-columns: repeat(4,1fr); /*fr-> fractional unit*/
+    padding: 2rem;
+    text-align: left;
+    font-size: 14px;
+}
+
+footer .footer-cols ul
+{
+    list-style: none; /*bullet disappers from list apply only in ul tag*/
+}
+
+footer .footer-cols ul li:first-child /*First element of li*/
+{
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: #444 solid 1px;
+    margin-bottom: 1rem;
+}
+
+footer .footer-bottom
+{
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+.section
+{
+    padding: 2rem 0;
+}
+
+.section-head
+{
+    font-size: 2.5rem;
+    margin:0;
+}
+
+.section h3
+{
+    font-size: 2rem;
+}
+
+:root
+{
+    ---primary-color: #b90415;
+    ---primary-color-hover: #d3071b;
+    ---secondary-color: #103063;
+    ---secondary-color-hover: #143f85;
+    ---light-color: #f4f4f4;
+}
+
+.btn
+{
+    padding: 1rem;
+    color:#fff;
+    display: inline-block;
+}
+
+.btn-primary
+{
+    background: var(---primary-color);
+}
+
+.btn-primary:hover
+{
+    background: var(---primary-color-hover);
+}
+
+.btn-secondary
+{
+    background: var(---secondary-color);
+}
+
+.btn-secondary:hover
+{
+    background: var(---secondary-color-hover);
+}
+
+.text-light
+{
+    color: var(---light-color);
+}
+
+.mb
+{
+    margin-bottom: 1rem;
+}
+
+.mt
+{
+    margin-top: 1rem;
+}
+
+/* ------------------------------- */
+.small-container
+{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.row
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.col-4
+{
+    flex-basis: 25%;
+    padding: 50px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+
+.col-4 img
+{
+    width: 100%;
+}
+
+.row-2
+{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+
+select
+{
+    border: 1px solid #ff523b;
+    padding: 5px;
+}
+
+select:focus
+{
+    outline: none;
+}
+
+.page-btn
+{
+    margin: 0 40px 80px;
+}
+
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #ff523b;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.page-btn span:hover
+{
+    background: #ff523b;
+    color: #ffffff;
+}
+
+h4{
+    color: #fff;
+    font-weight: normal;
+}
+
+.col-4 p
+{
+    font-size: 14px;
+}
+
+.checked{
+    color: #ff523b;
+}
+
+.col-4:hover
+{
+    transform: translateY(-50px);
+}
